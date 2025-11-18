@@ -1,1 +1,73 @@
 @import "tailwindcss";
+ 
+/* Custom styles for SuggestedCourses swiper pagination */
+.suggested-courses-swiper .swiper-pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.suggested-courses-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #3b82f6;
+  opacity: 0.4;
+  margin: 0 6px;
+}
+
+.suggested-courses-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #3b82f6;
+}
+
+/* Dark mode support */
+.dark .suggested-courses-swiper .swiper-pagination-bullet {
+  background: #60a5fa;
+}
+
+.dark .suggested-courses-swiper .swiper-pagination-bullet-active {
+  background: #60a5fa;
+}
+
+
+  @keyframes shine {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  
+  /* Dark mode select dropdown styling */
+  .dark-select option {
+    background-color: #1f2937 !important; /* bg-gray-800 */
+    color: white !important;
+  }
+  
+  .dark-select:focus option {
+    background-color: #1f2937 !important;
+    color: white !important;
+  }
+  
+  /* For Firefox */
+  .dark-select option:checked {
+    background-color: #3b82f6 !important; /* blue-500 */
+    color: white !important;
+  }
+  
+  /* For Webkit browsers (Chrome, Safari) */
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .dark-select option {
+      background-color: #1f2937 !important;
+      color: white !important;
+    }
+    
+    .dark-select option:checked {
+      background-color: #3b82f6 !important;
+      color: white !important;
+    }
+  }
